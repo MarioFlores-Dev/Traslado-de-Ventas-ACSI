@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_inventario_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="empresas">
+          <Key>
+            <PropertyRef Name="Id_Empresa" />
+          </Key>
+          <Property Name="Id_Empresa" Type="int" Nullable="false" />
+          <Property Name="Nombre_Empresa" Type="char" MaxLength="100" />
+          <Property Name="Porcentaje_Iva_Anterior" Type="int" />
+          <Property Name="Porcentaje_iva" Type="int" />
+          <Property Name="Periodo" Type="char" MaxLength="7" />
+          <Property Name="Lmodifica_Precios" Type="int" />
+          <Property Name="Sig_Orden_Servicio" Type="int" />
+          <Property Name="Porcentaje_Utilidad" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="apartirde" Type="datetime" />
+          <Property Name="Id_Bodega_Facturacion" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Id_Cuenta_Cxp" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Lmodifica_Costos" Type="int" Nullable="false" />
+          <Property Name="total_detalle_lineas" Type="int" Nullable="false" />
+          <Property Name="id_cuenta_efectivo" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="id_cuenta_banco" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="id_cuenta_credito" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="id_cuenta_anticipo" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="id_cuenta_debito" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="id_cuenta_debito_fiscal" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="direccion" Type="char" MaxLength="200" Nullable="false" />
+          <Property Name="telefonos" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="fax" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="Id_contrasena" Type="int" Nullable="false" />
+          <Property Name="Id_cuenta_anticipo_proveedores" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Id_cuenta_cxc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Id_cuenta_vtas" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Id_depto_vtas" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="id_cuenta_dep_transito_cxc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Sig_numero_presupuesto" Type="int" Nullable="false" />
+          <Property Name="Porcentaje_utilidad_sobre" Type="int" />
+          <Property Name="Factura_con" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Nombre_comercial" Type="varchar" MaxLength="100" />
+          <Property Name="Id_cuenta_rebaja_sventa" Type="char" MaxLength="10" />
+          <Property Name="Usa_orden_despacho" Type="int" Nullable="false" />
+          <Property Name="Opera_con_moneda" Type="char" MaxLength="10" />
+          <Property Name="Tasa_cambio" Type="numeric" Precision="18" Scale="5" />
+          <Property Name="Ingresa_fecha_al_facturar" Type="int" />
+          <Property Name="Facturacion_multibodega" Type="int" />
+          <Property Name="Id_cuenta_Retencion_iva_clientes" Type="char" MaxLength="10" />
+          <Property Name="Factura_en_base_aplantillas" Type="int" />
+          <Property Name="Utiliza_correlativo_contraseñas_pago" Type="int" />
+          <Property Name="directorio_logo" Type="varchar" MaxLength="80" />
+          <Property Name="Permite_existencia_negativa" Type="int" />
+          <Property Name="Id_propina" Type="char" MaxLength="15" />
+          <Property Name="Tipo_Orden_a_actualizar" Type="int" />
+          <Property Name="Orden_Envio_Pos_Factura" Type="int" />
+          <Property Name="Mascara_Cantidad" Type="char" MaxLength="10" />
+          <Property Name="Agente_Retenedor_IVA" Type="int" />
+          <Property Name="Regimen_Fiscal_isr" Type="varchar" MaxLength="15" />
+          <Property Name="Id_Cuenta_Retencion_ISR_Clientes" Type="char" MaxLength="10" />
+          <Property Name="Tipo_Cola_Ordenes" Type="int" />
+          <Property Name="Tipo_Correl_Orden" Type="int" />
+          <Property Name="ImprimeCopia" Type="bit" Nullable="false" />
+          <Property Name="CorrelativoComanda" Type="int" Nullable="false" />
+          <Property Name="FechaSistema" Type="datetime2" Precision="7" />
+          <Property Name="Afiliacion_iva" Type="nvarchar(max)" />
+          <Property Name="Codigo_Postal" Type="nvarchar(max)" />
+          <Property Name="Correo" Type="nvarchar(max)" />
+          <Property Name="Departamento" Type="nvarchar(max)" />
+          <Property Name="FE_Token" Type="nvarchar(max)" />
+          <Property Name="Fecha_Hora_Expira_Token" Type="datetime2" Precision="7" />
+          <Property Name="Municipio" Type="nvarchar(max)" />
+          <Property Name="NIT" Type="nvarchar(max)" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+          <Property Name="Numero_Establecimiento" Type="nvarchar(max)" />
+          <Property Name="Pais" Type="nvarchar(max)" />
+          <Property Name="UsaFel" Type="bit" Nullable="false" />
+          <Property Name="id_tbl_certificador" Type="int" Nullable="false" />
+          <Property Name="Es_Armeria" Type="bit" Nullable="false" />
+          <Property Name="Dias_Credito_Cliente" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Cajas">
+          <Key>
+            <PropertyRef Name="Id_Empresa" />
+            <PropertyRef Name="Id_Caja" />
+          </Key>
+          <Property Name="Id_Empresa" Type="int" Nullable="false" />
+          <Property Name="Id_Caja" Type="int" Nullable="false" />
+          <Property Name="Observaciones" Type="char" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Function Name="rpt_poliza_ventas_posFEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_Empresa" Type="int" Mode="In" />
+          <Parameter Name="Id_caja" Type="int" Mode="In" />
+          <Parameter Name="Fecha_inicial" Type="datetime" Mode="In" />
+          <Parameter Name="Fecha_final" Type="datetime" Mode="In" />
+          <Parameter Name="Tipo_reporte" Type="int" Mode="In" />
+          <Parameter Name="Tipo_poliza" Type="char" Mode="In" />
+          <Parameter Name="Numero_poliza" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_verificarTraslados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_empresa" Type="int" Mode="In" />
+          <Parameter Name="anio" Type="varchar" Mode="In" />
+          <Parameter Name="mes" Type="varchar" Mode="In" />
+          <Parameter Name="tipo" Type="varchar" Mode="In" />
+          <Parameter Name="caja" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="db_inventario_ModelStoreContainer">
+          <EntitySet Name="empresas" EntityType="Self.empresas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Cajas" EntityType="Self.Tbl_Cajas" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_inventario_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="db_inventario_Entities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="rpt_poliza_ventas_posFEL" ReturnType="Collection(db_inventario_Model.rpt_poliza_ventas_posFEL_Result)">
+            <Parameter Name="Id_Empresa" Mode="In" Type="Int32" />
+            <Parameter Name="Id_caja" Mode="In" Type="Int32" />
+            <Parameter Name="Fecha_inicial" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_final" Mode="In" Type="DateTime" />
+            <Parameter Name="Tipo_reporte" Mode="In" Type="Int32" />
+            <Parameter Name="Tipo_poliza" Mode="In" Type="String" />
+            <Parameter Name="Numero_poliza" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_verificarTraslados" ReturnType="Collection(db_inventario_Model.sp_verificarTraslados_Result)">
+            <Parameter Name="id_empresa" Mode="In" Type="Int32" />
+            <Parameter Name="anio" Mode="In" Type="String" />
+            <Parameter Name="mes" Mode="In" Type="String" />
+            <Parameter Name="tipo" Mode="In" Type="String" />
+            <Parameter Name="caja" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="rpt_poliza_ventas_posFEL1" ReturnType="Collection(db_inventario_Model.rpt_poliza_ventas_posFEL1_Result)">
+            <Parameter Name="Id_Empresa" Mode="In" Type="Int32" />
+            <Parameter Name="Id_caja" Mode="In" Type="Int32" />
+            <Parameter Name="Fecha_inicial" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_final" Mode="In" Type="DateTime" />
+            <Parameter Name="Tipo_reporte" Mode="In" Type="Int32" />
+            <Parameter Name="Tipo_poliza" Mode="In" Type="String" />
+            <Parameter Name="Numero_poliza" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="empresas" EntityType="db_inventario_Model.empresas" />
+          <EntitySet Name="Tbl_Cajas" EntityType="db_inventario_Model.Tbl_Cajas" />
+        </EntityContainer>
+        <ComplexType Name="rpt_poliza_ventas_posFEL_Result">
+          <Property Type="String" Name="nombre_empresa" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Cuenta_Contable" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="nombre_cuenta" Nullable="true" MaxLength="84" />
+          <Property Type="Decimal" Name="debe" Nullable="false" Precision="2" Scale="2" />
+          <Property Type="Decimal" Name="haber" Nullable="false" Precision="2" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="sp_verificarTraslados_Result">
+          <Property Type="Int32" Name="ID_EMPRESA" Nullable="false" />
+          <Property Type="String" Name="ANIO" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="MES" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="ID_BANCO" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="TIPO" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="NUMERO" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="DIA" Nullable="true" />
+          <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="200" />
+          <Property Type="Int32" Name="SISTEMA" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_HORA_SISTEMA" Nullable="true" Precision="23" />
+          <Property Type="String" Name="USUARIO" Nullable="true" MaxLength="80" />
+          <Property Type="Int32" Name="CONCILIADO" Nullable="true" />
+          <Property Type="Decimal" Name="TASA_TRANSACCION" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="TASA_PROMEDIO" Nullable="true" Precision="10" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="rpt_poliza_ventas_posFEL1_Result">
+          <Property Type="String" Name="nombre_empresa" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Cuenta_Contable" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="nombre_cuenta" Nullable="true" MaxLength="84" />
+          <Property Type="Decimal" Name="debe" Nullable="false" Precision="2" Scale="2" />
+          <Property Type="Decimal" Name="haber" Nullable="false" Precision="2" Scale="2" />
+        </ComplexType>
+        <EntityType Name="empresas">
+          <Key>
+            <PropertyRef Name="Id_Empresa" />
+          </Key>
+          <Property Name="Id_Empresa" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Empresa" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="Porcentaje_Iva_Anterior" Type="Int32" />
+          <Property Name="Porcentaje_iva" Type="Int32" />
+          <Property Name="Periodo" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="Lmodifica_Precios" Type="Int32" />
+          <Property Name="Sig_Orden_Servicio" Type="Int32" />
+          <Property Name="Porcentaje_Utilidad" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="apartirde" Type="DateTime" Precision="3" />
+          <Property Name="Id_Bodega_Facturacion" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Id_Cuenta_Cxp" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Lmodifica_Costos" Type="Int32" Nullable="false" />
+          <Property Name="total_detalle_lineas" Type="Int32" Nullable="false" />
+          <Property Name="id_cuenta_efectivo" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="id_cuenta_banco" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="id_cuenta_credito" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="id_cuenta_anticipo" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="id_cuenta_debito" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="id_cuenta_debito_fiscal" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="direccion" Type="String" Nullable="false" MaxLength="200" FixedLength="true" Unicode="false" />
+          <Property Name="telefonos" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="fax" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="Id_contrasena" Type="Int32" Nullable="false" />
+          <Property Name="Id_cuenta_anticipo_proveedores" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Id_cuenta_cxc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Id_cuenta_vtas" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Id_depto_vtas" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="id_cuenta_dep_transito_cxc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Sig_numero_presupuesto" Type="Int32" Nullable="false" />
+          <Property Name="Porcentaje_utilidad_sobre" Type="Int32" />
+          <Property Name="Factura_con" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Nombre_comercial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Id_cuenta_rebaja_sventa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Usa_orden_despacho" Type="Int32" Nullable="false" />
+          <Property Name="Opera_con_moneda" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Tasa_cambio" Type="Decimal" Precision="18" Scale="5" />
+          <Property Name="Ingresa_fecha_al_facturar" Type="Int32" />
+          <Property Name="Facturacion_multibodega" Type="Int32" />
+          <Property Name="Id_cuenta_Retencion_iva_clientes" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Factura_en_base_aplantillas" Type="Int32" />
+          <Property Name="Utiliza_correlativo_contraseñas_pago" Type="Int32" />
+          <Property Name="directorio_logo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Permite_existencia_negativa" Type="Int32" />
+          <Property Name="Id_propina" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="Tipo_Orden_a_actualizar" Type="Int32" />
+          <Property Name="Orden_Envio_Pos_Factura" Type="Int32" />
+          <Property Name="Mascara_Cantidad" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Agente_Retenedor_IVA" Type="Int32" />
+          <Property Name="Regimen_Fiscal_isr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Cuenta_Retencion_ISR_Clientes" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Tipo_Cola_Ordenes" Type="Int32" />
+          <Property Name="Tipo_Correl_Orden" Type="Int32" />
+          <Property Name="ImprimeCopia" Type="Boolean" Nullable="false" />
+          <Property Name="CorrelativoComanda" Type="Int32" Nullable="false" />
+          <Property Name="FechaSistema" Type="DateTime" Precision="7" />
+          <Property Name="Afiliacion_iva" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Codigo_Postal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Correo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Departamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FE_Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fecha_Hora_Expira_Token" Type="DateTime" Precision="7" />
+          <Property Name="Municipio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NIT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Numero_Establecimiento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UsaFel" Type="Boolean" Nullable="false" />
+          <Property Name="id_tbl_certificador" Type="Int32" Nullable="false" />
+          <Property Name="Es_Armeria" Type="Boolean" Nullable="false" />
+          <Property Name="Dias_Credito_Cliente" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Cajas">
+          <Key>
+            <PropertyRef Name="Id_Empresa" />
+            <PropertyRef Name="Id_Caja" />
+          </Key>
+          <Property Name="Id_Empresa" Type="Int32" Nullable="false" />
+          <Property Name="Id_Caja" Type="Int32" Nullable="false" />
+          <Property Name="Observaciones" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_inventario_ModelStoreContainer" CdmEntityContainer="db_inventario_Entities" >
+          <FunctionImportMapping FunctionImportName="rpt_poliza_ventas_posFEL" FunctionName="db_inventario_Model.Store.rpt_poliza_ventas_posFEL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_inventario_Model.rpt_poliza_ventas_posFEL_Result">
+                <ScalarProperty Name="nombre_empresa" ColumnName="nombre_empresa" />
+                <ScalarProperty Name="Cuenta_Contable" ColumnName="Cuenta_Contable" />
+                <ScalarProperty Name="nombre_cuenta" ColumnName="nombre_cuenta" />
+                <ScalarProperty Name="debe" ColumnName="debe" />
+                <ScalarProperty Name="haber" ColumnName="haber" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_verificarTraslados" FunctionName="db_inventario_Model.Store.sp_verificarTraslados">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_inventario_Model.sp_verificarTraslados_Result">
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="ANIO" ColumnName="ANIO" />
+                <ScalarProperty Name="MES" ColumnName="MES" />
+                <ScalarProperty Name="ID_BANCO" ColumnName="ID_BANCO" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+                <ScalarProperty Name="DIA" ColumnName="DIA" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="SISTEMA" ColumnName="SISTEMA" />
+                <ScalarProperty Name="FECHA_HORA_SISTEMA" ColumnName="FECHA_HORA_SISTEMA" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="CONCILIADO" ColumnName="CONCILIADO" />
+                <ScalarProperty Name="TASA_TRANSACCION" ColumnName="TASA_TRANSACCION" />
+                <ScalarProperty Name="TASA_PROMEDIO" ColumnName="TASA_PROMEDIO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="rpt_poliza_ventas_posFEL1" FunctionName="db_inventario_Model.Store.rpt_poliza_ventas_posFEL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_inventario_Model.rpt_poliza_ventas_posFEL1_Result">
+                <ScalarProperty Name="nombre_empresa" ColumnName="nombre_empresa" />
+                <ScalarProperty Name="Cuenta_Contable" ColumnName="Cuenta_Contable" />
+                <ScalarProperty Name="nombre_cuenta" ColumnName="nombre_cuenta" />
+                <ScalarProperty Name="debe" ColumnName="debe" />
+                <ScalarProperty Name="haber" ColumnName="haber" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="empresas">
+            <EntityTypeMapping TypeName="db_inventario_Model.empresas">
+              <MappingFragment StoreEntitySet="empresas">
+                <ScalarProperty Name="Dias_Credito_Cliente" ColumnName="Dias_Credito_Cliente" />
+                <ScalarProperty Name="Es_Armeria" ColumnName="Es_Armeria" />
+                <ScalarProperty Name="id_tbl_certificador" ColumnName="id_tbl_certificador" />
+                <ScalarProperty Name="UsaFel" ColumnName="UsaFel" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Numero_Establecimiento" ColumnName="Numero_Establecimiento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="NIT" ColumnName="NIT" />
+                <ScalarProperty Name="Municipio" ColumnName="Municipio" />
+                <ScalarProperty Name="Fecha_Hora_Expira_Token" ColumnName="Fecha_Hora_Expira_Token" />
+                <ScalarProperty Name="FE_Token" ColumnName="FE_Token" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Codigo_Postal" ColumnName="Codigo_Postal" />
+                <ScalarProperty Name="Afiliacion_iva" ColumnName="Afiliacion_iva" />
+                <ScalarProperty Name="FechaSistema" ColumnName="FechaSistema" />
+                <ScalarProperty Name="CorrelativoComanda" ColumnName="CorrelativoComanda" />
+                <ScalarProperty Name="ImprimeCopia" ColumnName="ImprimeCopia" />
+                <ScalarProperty Name="Tipo_Correl_Orden" ColumnName="Tipo_Correl_Orden" />
+                <ScalarProperty Name="Tipo_Cola_Ordenes" ColumnName="Tipo_Cola_Ordenes" />
+                <ScalarProperty Name="Id_Cuenta_Retencion_ISR_Clientes" ColumnName="Id_Cuenta_Retencion_ISR_Clientes" />
+                <ScalarProperty Name="Regimen_Fiscal_isr" ColumnName="Regimen_Fiscal_isr" />
+                <ScalarProperty Name="Agente_Retenedor_IVA" ColumnName="Agente_Retenedor_IVA" />
+                <ScalarProperty Name="Mascara_Cantidad" ColumnName="Mascara_Cantidad" />
+                <ScalarProperty Name="Orden_Envio_Pos_Factura" ColumnName="Orden_Envio_Pos_Factura" />
+                <ScalarProperty Name="Tipo_Orden_a_actualizar" ColumnName="Tipo_Orden_a_actualizar" />
+                <ScalarProperty Name="Id_propina" ColumnName="Id_propina" />
+                <ScalarProperty Name="Permite_existencia_negativa" ColumnName="Permite_existencia_negativa" />
+                <ScalarProperty Name="directorio_logo" ColumnName="directorio_logo" />
+                <ScalarProperty Name="Utiliza_correlativo_contraseñas_pago" ColumnName="Utiliza_correlativo_contraseñas_pago" />
+                <ScalarProperty Name="Factura_en_base_aplantillas" ColumnName="Factura_en_base_aplantillas" />
+                <ScalarProperty Name="Id_cuenta_Retencion_iva_clientes" ColumnName="Id_cuenta_Retencion_iva_clientes" />
+                <ScalarProperty Name="Facturacion_multibodega" ColumnName="Facturacion_multibodega" />
+                <ScalarProperty Name="Ingresa_fecha_al_facturar" ColumnName="Ingresa_fecha_al_facturar" />
+                <ScalarProperty Name="Tasa_cambio" ColumnName="Tasa_cambio" />
+                <ScalarProperty Name="Opera_con_moneda" ColumnName="Opera_con_moneda" />
+                <ScalarProperty Name="Usa_orden_despacho" ColumnName="Usa_orden_despacho" />
+                <ScalarProperty Name="Id_cuenta_rebaja_sventa" ColumnName="Id_cuenta_rebaja_sventa" />
+                <ScalarProperty Name="Nombre_comercial" ColumnName="Nombre_comercial" />
+                <ScalarProperty Name="Factura_con" ColumnName="Factura_con" />
+                <ScalarProperty Name="Porcentaje_utilidad_sobre" ColumnName="Porcentaje_utilidad_sobre" />
+                <ScalarProperty Name="Sig_numero_presupuesto" ColumnName="Sig_numero_presupuesto" />
+                <ScalarProperty Name="id_cuenta_dep_transito_cxc" ColumnName="id_cuenta_dep_transito_cxc" />
+                <ScalarProperty Name="Id_depto_vtas" ColumnName="Id_depto_vtas" />
+                <ScalarProperty Name="Id_cuenta_vtas" ColumnName="Id_cuenta_vtas" />
+                <ScalarProperty Name="Id_cuenta_cxc" ColumnName="Id_cuenta_cxc" />
+                <ScalarProperty Name="Id_cuenta_anticipo_proveedores" ColumnName="Id_cuenta_anticipo_proveedores" />
+                <ScalarProperty Name="Id_contrasena" ColumnName="Id_contrasena" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="telefonos" ColumnName="telefonos" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="id_cuenta_debito_fiscal" ColumnName="id_cuenta_debito_fiscal" />
+                <ScalarProperty Name="id_cuenta_debito" ColumnName="id_cuenta_debito" />
+                <ScalarProperty Name="id_cuenta_anticipo" ColumnName="id_cuenta_anticipo" />
+                <ScalarProperty Name="id_cuenta_credito" ColumnName="id_cuenta_credito" />
+                <ScalarProperty Name="id_cuenta_banco" ColumnName="id_cuenta_banco" />
+                <ScalarProperty Name="id_cuenta_efectivo" ColumnName="id_cuenta_efectivo" />
+                <ScalarProperty Name="total_detalle_lineas" ColumnName="total_detalle_lineas" />
+                <ScalarProperty Name="Lmodifica_Costos" ColumnName="Lmodifica_Costos" />
+                <ScalarProperty Name="Id_Cuenta_Cxp" ColumnName="Id_Cuenta_Cxp" />
+                <ScalarProperty Name="Id_Bodega_Facturacion" ColumnName="Id_Bodega_Facturacion" />
+                <ScalarProperty Name="apartirde" ColumnName="apartirde" />
+                <ScalarProperty Name="Porcentaje_Utilidad" ColumnName="Porcentaje_Utilidad" />
+                <ScalarProperty Name="Sig_Orden_Servicio" ColumnName="Sig_Orden_Servicio" />
+                <ScalarProperty Name="Lmodifica_Precios" ColumnName="Lmodifica_Precios" />
+                <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+                <ScalarProperty Name="Porcentaje_iva" ColumnName="Porcentaje_iva" />
+                <ScalarProperty Name="Porcentaje_Iva_Anterior" ColumnName="Porcentaje_Iva_Anterior" />
+                <ScalarProperty Name="Nombre_Empresa" ColumnName="Nombre_Empresa" />
+                <ScalarProperty Name="Id_Empresa" ColumnName="Id_Empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Cajas">
+            <EntityTypeMapping TypeName="db_inventario_Model.Tbl_Cajas">
+              <MappingFragment StoreEntitySet="Tbl_Cajas">
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="Id_Caja" ColumnName="Id_Caja" />
+                <ScalarProperty Name="Id_Empresa" ColumnName="Id_Empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

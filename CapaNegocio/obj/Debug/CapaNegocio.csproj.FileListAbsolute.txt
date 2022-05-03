@@ -1,0 +1,15 @@
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\CapaNegocio.dll.config
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\EntityFramework.dll
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\EntityFramework.SqlServer.dll
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\CapaDatos.dll.config
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\EntityFramework.xml
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\bin\Debug\EntityFramework.SqlServer.xml
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaNegocio\obj\Debug\CapaNegocio.pdb
