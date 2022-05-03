@@ -72,11 +72,12 @@ namespace CapaPresentacion {
                 dgv_dataContabilizacion.Columns[3].HeaderText = "Debe";
                 dgv_dataContabilizacion.Columns[4].HeaderText = "Haber";
 
+                dgv_dataContabilizacion.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dgv_dataContabilizacion.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+
                 dgv_dataContabilizacion.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dgv_dataContabilizacion.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-                dgv_dataContabilizacion.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgv_dataContabilizacion.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
 
                 lbl_debe.Text = ("Q "+Convert.ToString(CalculoDebe()));
                 lbl_haber.Text = ("Q "+Convert.ToString(CalculoHaber()));
