@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 namespace CapaNegocio{
     public class Empresas{
 
-        public static List<CapaDatos.empresas> GetEmpresas(){
+        public static List<CapaDatos.sp_getEmpresas_Result> GetEmpresas(){
 
             using (CapaDatos.db_inventario_Entities db = new CapaDatos.db_inventario_Entities())
             {
-                var empresas = (from e in db.empresas
-                                select e) ;
-                return empresas.ToList();
+                return db.sp_getEmpresas().ToList();
             }
         }
 

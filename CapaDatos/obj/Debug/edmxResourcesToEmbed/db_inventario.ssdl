@@ -1,81 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="db_inventario_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="empresas">
-    <Key>
-      <PropertyRef Name="Id_Empresa" />
-    </Key>
-    <Property Name="Id_Empresa" Type="int" Nullable="false" />
-    <Property Name="Nombre_Empresa" Type="char" MaxLength="100" />
-    <Property Name="Porcentaje_Iva_Anterior" Type="int" />
-    <Property Name="Porcentaje_iva" Type="int" />
-    <Property Name="Periodo" Type="char" MaxLength="7" />
-    <Property Name="Lmodifica_Precios" Type="int" />
-    <Property Name="Sig_Orden_Servicio" Type="int" />
-    <Property Name="Porcentaje_Utilidad" Type="numeric" Precision="18" Scale="2" />
-    <Property Name="apartirde" Type="datetime" />
-    <Property Name="Id_Bodega_Facturacion" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Id_Cuenta_Cxp" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Lmodifica_Costos" Type="int" Nullable="false" />
-    <Property Name="total_detalle_lineas" Type="int" Nullable="false" />
-    <Property Name="id_cuenta_efectivo" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="id_cuenta_banco" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="id_cuenta_credito" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="id_cuenta_anticipo" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="id_cuenta_debito" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="id_cuenta_debito_fiscal" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="direccion" Type="char" MaxLength="200" Nullable="false" />
-    <Property Name="telefonos" Type="char" MaxLength="50" Nullable="false" />
-    <Property Name="fax" Type="char" MaxLength="20" Nullable="false" />
-    <Property Name="email" Type="char" MaxLength="50" Nullable="false" />
-    <Property Name="Id_contrasena" Type="int" Nullable="false" />
-    <Property Name="Id_cuenta_anticipo_proveedores" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Id_cuenta_cxc" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Id_cuenta_vtas" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Id_depto_vtas" Type="char" MaxLength="3" Nullable="false" />
-    <Property Name="id_cuenta_dep_transito_cxc" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Sig_numero_presupuesto" Type="int" Nullable="false" />
-    <Property Name="Porcentaje_utilidad_sobre" Type="int" />
-    <Property Name="Factura_con" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Nombre_comercial" Type="varchar" MaxLength="100" />
-    <Property Name="Id_cuenta_rebaja_sventa" Type="char" MaxLength="10" />
-    <Property Name="Usa_orden_despacho" Type="int" Nullable="false" />
-    <Property Name="Opera_con_moneda" Type="char" MaxLength="10" />
-    <Property Name="Tasa_cambio" Type="numeric" Precision="18" Scale="5" />
-    <Property Name="Ingresa_fecha_al_facturar" Type="int" />
-    <Property Name="Facturacion_multibodega" Type="int" />
-    <Property Name="Id_cuenta_Retencion_iva_clientes" Type="char" MaxLength="10" />
-    <Property Name="Factura_en_base_aplantillas" Type="int" />
-    <Property Name="Utiliza_correlativo_contraseñas_pago" Type="int" />
-    <Property Name="directorio_logo" Type="varchar" MaxLength="80" />
-    <Property Name="Permite_existencia_negativa" Type="int" />
-    <Property Name="Id_propina" Type="char" MaxLength="15" />
-    <Property Name="Tipo_Orden_a_actualizar" Type="int" />
-    <Property Name="Orden_Envio_Pos_Factura" Type="int" />
-    <Property Name="Mascara_Cantidad" Type="char" MaxLength="10" />
-    <Property Name="Agente_Retenedor_IVA" Type="int" />
-    <Property Name="Regimen_Fiscal_isr" Type="varchar" MaxLength="15" />
-    <Property Name="Id_Cuenta_Retencion_ISR_Clientes" Type="char" MaxLength="10" />
-    <Property Name="Tipo_Cola_Ordenes" Type="int" />
-    <Property Name="Tipo_Correl_Orden" Type="int" />
-    <Property Name="ImprimeCopia" Type="bit" Nullable="false" />
-    <Property Name="CorrelativoComanda" Type="int" Nullable="false" />
-    <Property Name="FechaSistema" Type="datetime2" Precision="7" />
-    <Property Name="Afiliacion_iva" Type="nvarchar(max)" />
-    <Property Name="Codigo_Postal" Type="nvarchar(max)" />
-    <Property Name="Correo" Type="nvarchar(max)" />
-    <Property Name="Departamento" Type="nvarchar(max)" />
-    <Property Name="FE_Token" Type="nvarchar(max)" />
-    <Property Name="Fecha_Hora_Expira_Token" Type="datetime2" Precision="7" />
-    <Property Name="Municipio" Type="nvarchar(max)" />
-    <Property Name="NIT" Type="nvarchar(max)" />
-    <Property Name="Nombre" Type="nvarchar(max)" />
-    <Property Name="Numero_Establecimiento" Type="nvarchar(max)" />
-    <Property Name="Pais" Type="nvarchar(max)" />
-    <Property Name="UsaFel" Type="bit" Nullable="false" />
-    <Property Name="id_tbl_certificador" Type="int" Nullable="false" />
-    <Property Name="Es_Armeria" Type="bit" Nullable="false" />
-    <Property Name="Dias_Credito_Cliente" Type="int" />
-  </EntityType>
   <EntityType Name="Tbl_Cajas">
     <Key>
       <PropertyRef Name="Id_Empresa" />
@@ -94,6 +18,7 @@
     <Parameter Name="Tipo_poliza" Type="char" Mode="In" />
     <Parameter Name="Numero_poliza" Type="char" Mode="In" />
   </Function>
+  <Function Name="sp_getEmpresas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="sp_verificarTraslados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id_empresa" Type="int" Mode="In" />
     <Parameter Name="anio" Type="varchar" Mode="In" />
@@ -102,7 +27,6 @@
     <Parameter Name="caja" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="db_inventario_ModelStoreContainer">
-    <EntitySet Name="empresas" EntityType="Self.empresas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tbl_Cajas" EntityType="Self.Tbl_Cajas" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

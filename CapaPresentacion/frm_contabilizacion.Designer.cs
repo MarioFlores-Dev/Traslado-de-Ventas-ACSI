@@ -30,7 +30,6 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_contabilizacion));
             this.pnl_parametros = new System.Windows.Forms.Panel();
             this.btn_contabilizar = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@ namespace CapaPresentacion
             this.lbl_debe = new System.Windows.Forms.Label();
             this.lbl_haber = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_verificarTraslados = new System.Windows.Forms.Button();
             this.pnl_parametros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dataContabilizacion)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,7 @@ namespace CapaPresentacion
             // pnl_parametros
             // 
             this.pnl_parametros.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_parametros.Controls.Add(this.btn_verificarTraslados);
             this.pnl_parametros.Controls.Add(this.btn_contabilizar);
             this.pnl_parametros.Controls.Add(this.lbl_parametros);
             this.pnl_parametros.Controls.Add(this.lbl_empresa);
@@ -279,14 +280,6 @@ namespace CapaPresentacion
             this.dgv_dataContabilizacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_dataContabilizacion.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_dataContabilizacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_dataContabilizacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_dataContabilizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_dataContabilizacion.Location = new System.Drawing.Point(21, 291);
             this.dgv_dataContabilizacion.Name = "dgv_dataContabilizacion";
@@ -335,6 +328,19 @@ namespace CapaPresentacion
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 24;
             this.label4.Text = "Haber";
+            // 
+            // btn_verificarTraslados
+            // 
+            this.btn_verificarTraslados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_verificarTraslados.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verificarTraslados.Location = new System.Drawing.Point(697, 144);
+            this.btn_verificarTraslados.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_verificarTraslados.Name = "btn_verificarTraslados";
+            this.btn_verificarTraslados.Size = new System.Drawing.Size(164, 36);
+            this.btn_verificarTraslados.TabIndex = 19;
+            this.btn_verificarTraslados.Text = "Verificar Traslados";
+            this.btn_verificarTraslados.UseVisualStyleBackColor = true;
+            this.btn_verificarTraslados.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm_contabilizacion
             // 
@@ -388,6 +394,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label lbl_debe;
         private System.Windows.Forms.Label lbl_haber;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_verificarTraslados;
     }
 }
 

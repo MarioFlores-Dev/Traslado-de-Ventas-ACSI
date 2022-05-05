@@ -91,6 +91,9 @@ namespace CapaPresentacion {
                 var datos = CapaNegocio.Traslados.rpt_Poliza_Ventas_PosFEL_Results(empresa, caja, fechaInicial, fechaFinal, 1, tipoPoliza, numeroPoliza);
                 MessageBox.Show("Traslado exitoso");
                 dgv_dataContabilizacion.Columns.Clear();
+                lbl_debe.Text = (0.00).ToString();
+                lbl_haber.Text = (0.00).ToString();
+                txt_numeroPoliza.Text = ("");
                 btn_contabilizar.Enabled = false;
             }
 
@@ -120,6 +123,12 @@ namespace CapaPresentacion {
         private void dgv_dataContabilizacion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_verificarTraslados frmTraslados = new frm_verificarTraslados();
+            frmTraslados.Show();
         }
     }
 }

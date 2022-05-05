@@ -19,3 +19,4 @@ D:\ACSI\Desarrollos\Traslado de Ventas\CapaPresentacion\obj\Debug\CapaPresentaci
 D:\ACSI\Desarrollos\Traslado de Ventas\CapaPresentacion\bin\Debug\CapaDatos.dll
 D:\ACSI\Desarrollos\Traslado de Ventas\CapaPresentacion\bin\Debug\CapaDatos.pdb
 D:\ACSI\Desarrollos\Traslado de Ventas\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+D:\ACSI\Desarrollos\Traslado de Ventas\CapaPresentacion\obj\Debug\CapaPresentacion.frm_verificarTraslados.resources

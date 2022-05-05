@@ -68,11 +68,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_inventario.edmx</DependentUpon>
     </Compile>
-    <Compile Include="empresas.cs">
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpt_poliza_ventas_posFEL1_Result.cs">
       <DependentUpon>db_inventario.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rpt_poliza_ventas_posFEL_Result.cs">
+      <DependentUpon>db_inventario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getEmpresas_Result.cs">
       <DependentUpon>db_inventario.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_verificarTraslados_Result.cs">

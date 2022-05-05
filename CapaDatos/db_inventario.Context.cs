@@ -27,7 +27,6 @@ namespace CapaDatos
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<empresas> empresas { get; set; }
         public virtual DbSet<Tbl_Cajas> Tbl_Cajas { get; set; }
     
         public virtual ObjectResult<rpt_poliza_ventas_posFEL_Result> rpt_poliza_ventas_posFEL(Nullable<int> id_Empresa, Nullable<int> id_caja, Nullable<System.DateTime> fecha_inicial, Nullable<System.DateTime> fecha_final, Nullable<int> tipo_reporte, string tipo_poliza, string numero_poliza)
@@ -88,6 +87,42 @@ namespace CapaDatos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_verificarTraslados_Result>("sp_verificarTraslados", id_empresaParameter, anioParameter, mesParameter, tipoParameter, cajaParameter);
         }
     
-        
+        public virtual ObjectResult<rpt_poliza_ventas_posFEL1_Result> rpt_poliza_ventas_posFEL1(Nullable<int> id_Empresa, Nullable<int> id_caja, Nullable<System.DateTime> fecha_inicial, Nullable<System.DateTime> fecha_final, Nullable<int> tipo_reporte, string tipo_poliza, string numero_poliza)
+        {
+            var id_EmpresaParameter = id_Empresa.HasValue ?
+                new ObjectParameter("Id_Empresa", id_Empresa) :
+                new ObjectParameter("Id_Empresa", typeof(int));
+    
+            var id_cajaParameter = id_caja.HasValue ?
+                new ObjectParameter("Id_caja", id_caja) :
+                new ObjectParameter("Id_caja", typeof(int));
+    
+            var fecha_inicialParameter = fecha_inicial.HasValue ?
+                new ObjectParameter("Fecha_inicial", fecha_inicial) :
+                new ObjectParameter("Fecha_inicial", typeof(System.DateTime));
+    
+            var fecha_finalParameter = fecha_final.HasValue ?
+                new ObjectParameter("Fecha_final", fecha_final) :
+                new ObjectParameter("Fecha_final", typeof(System.DateTime));
+    
+            var tipo_reporteParameter = tipo_reporte.HasValue ?
+                new ObjectParameter("Tipo_reporte", tipo_reporte) :
+                new ObjectParameter("Tipo_reporte", typeof(int));
+    
+            var tipo_polizaParameter = tipo_poliza != null ?
+                new ObjectParameter("Tipo_poliza", tipo_poliza) :
+                new ObjectParameter("Tipo_poliza", typeof(string));
+    
+            var numero_polizaParameter = numero_poliza != null ?
+                new ObjectParameter("Numero_poliza", numero_poliza) :
+                new ObjectParameter("Numero_poliza", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rpt_poliza_ventas_posFEL1_Result>("rpt_poliza_ventas_posFEL1", id_EmpresaParameter, id_cajaParameter, fecha_inicialParameter, fecha_finalParameter, tipo_reporteParameter, tipo_polizaParameter, numero_polizaParameter);
+        }
+    
+        public virtual ObjectResult<sp_getEmpresas_Result> sp_getEmpresas()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getEmpresas_Result>("sp_getEmpresas");
+        }
     }
 }
